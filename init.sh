@@ -31,3 +31,6 @@
 . ./src/install-scripts/git_install.sh
 #gitInstall
 
+#导入git配置模块
+. ./src/config-scripts/git_config.sh
+#gitConfig

@@ -20,15 +20,28 @@ echo -e "\033[1;5;34m是否要生成ssh keys可能会覆盖之前的请谨慎操
 select check in "是" "否"
 do
   case $check in
-     "否")break;;
+     "否")
+	exit
+	break;;
      "是")
 	mkdir -p ~/.ssh/`git config --global user.name`
 	ssh-keygen -t rsa -C `git config --global user.email` -f ~/.ssh/`git config --global user.name`/ssh_rsa
+	ssh -v git@github.com
+	ssh-agent -s
 	break ;;
   esac
 done
 echo -e "\033[1;5;32m密钥生成成功请复制到github上或者在~/.ssh/`git config --global user.name`/ssh_rsa.pub下复制\033[0m"
 cat ~/.ssh/`git config --global user.name`/ssh_rsa.pub
+echo -e "\033[1;35m复制完成请输入yes\033[0m"
+read istrue
+if [[ $istrue -eq "yes" ]]
+then
+   ssh-add ~/.ssh/`git config --global user.name`/ssh_rsa
+   ssh -T git@github.com
+   echo -e "\033[1;5;32m如果最后输出的内容出现successly则成功\033[0m"
+else
+echo -e "\033[1;5;31m配置失败"
+fi
 }
 
-gitConfig
