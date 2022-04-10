@@ -33,5 +33,6 @@
 
 #导入git配置模块
 . ./src/config-scripts/git_config.sh
-#girConfig
+# gitConfig
+
 

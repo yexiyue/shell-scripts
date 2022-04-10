@@ -49,7 +49,7 @@ nginx_install.sh #nginx安装脚本
 node_install.sh #node安装脚本
 ```
 
-**注意：**
+### **注意：**
 
 **以上的文件里面我写的都是函数**
 
@@ -57,7 +57,7 @@ node_install.sh #node安装脚本
 
 
 
-**注意：**
+### **注意：**
 
 **可能刚下载的文件上传到linux上格式会不对**
 
@@ -68,6 +68,18 @@ node_install.sh #node安装脚本
 这样就能执行了
 
 
+
+### **注意：**
+
+**在使用配置模块时要单独使用**
+
+**先输入**
+
+**ssh-agent  bash**
+
+**再**
+
+**sh init.sh**
 
 ### init.sh入口文件
 

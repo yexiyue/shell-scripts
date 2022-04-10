@@ -45,5 +45,6 @@ fi
 systemctl status nginx
 echo -e "\033[1;5;32m==========nginx安装完成==========\033[0m"
 rm -rf ~/nginx
+rm -rf ~/nginx.tar.gz
 }
 
