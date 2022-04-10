@@ -53,7 +53,13 @@ node_install.sh #node安装脚本
 
 **直接运行单个文件没有效果**
 
+**注意可能刚下载的文件上传到linux上格式会不对**
 
+**这时需要vim每个脚本文件**
+
+**:set fileformat=unix**
+
+这样就能执行了
 
 ### init.sh入口文件
 
