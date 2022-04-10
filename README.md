@@ -1,4 +1,4 @@
-# ease-shell脚本库
+# shell脚本库
 
 
 
