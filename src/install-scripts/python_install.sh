@@ -20,6 +20,6 @@ echo 'export PATH=$PYTHON_HOME:$PATH' >> /etc/profile
 source /etc/profile
 python3 --version
 #升级一下pip 和setuptools
-python -m pip install -U pip setuptools
+python3 -m pip install -U pip setuptools
 }
 pythonInstall
