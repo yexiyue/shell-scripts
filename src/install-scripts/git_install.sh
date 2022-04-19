@@ -19,7 +19,7 @@ make prefix=/usr/local/git all
 make prefix=/usr/local/git install
 #配置环境变量
 echo 'export GIT_HOME=/usr/local/git/bin' >>/etc/profile
-echo 'export PATH=$GIT_HTME:$PATH' >> /etc/profile
+echo 'export PATH=$GIT_HOME:$PATH' >> /etc/profile
 #重新加载资源
 source /etc/profile
 echo -e "\033[1;5;32m==========git安装成功==========\033[0m"
